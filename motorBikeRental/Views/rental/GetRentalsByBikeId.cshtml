@@ -1,0 +1,30 @@
+﻿@model IEnumerable<motorBikeRental.Models.rentalHistoryDto>
+@{
+    ViewBag.Title = "List";
+}
+
+<h2> Rental history by Bike </h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Bike Model</th>
+            <th scope="col">Bike Brand</th>
+            <th scope="col">Customer Name</th>
+            <th scope="col">From </th>
+            <th scope="col">to </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var rental in Model)
+        {
+            <tr>
+                <th scope="row">@rental.BikeModel</th>
+                <td>@rental.BikeBrand</td>
+                <td>@rental.customerName</td>
+                <td>@rental.from</td>
+                <td>@rental.to</td>
+            </tr>
+        }
+        <a href="#" class="card-link"></a>
+    </tbody>
+</table>

@@ -1,0 +1,22 @@
+﻿
+@model IEnumerable<motorBikeRental.Models.bikeDto>
+@{
+    ViewBag.Title = "List";
+}
+
+<h2> Bikes </h2>
+<div class="d-flex gap-2">
+    @foreach (var bike in Model)
+    {
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">@bike.BikeModel</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Brand :- @bike.BikeBrand</h6>
+                <p class="card-text">Bike rent Per day is @bike.BikeRate</p>
+                <a href="#" class="card-link">Rent Now</a>              
+            </div>
+        </div>
+
+    }
+
+</div>

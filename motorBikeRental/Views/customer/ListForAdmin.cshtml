@@ -1,0 +1,29 @@
+﻿@model IEnumerable<motorBikeRental.Models.customerDto>
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List of customers</h2>
+(Click on Customer name to see the list of biked rented by that customer )
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Address</th>
+            <th scope="col">Contact Number</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var customer in Model)
+        {
+            <tr>
+                <th scope="row"><a href="/rental/GetRentalsByCustomerId/@customer.customerId" class="card-link">@customer.customerName</a></th>
+                <td>@customer.customerAddress</td>
+                <td>@customer.customerPhone</td>
+                <td><a href="#" class="card-link">Update</a> <a href="#" class="card-link">Delete</a></td>
+            </tr>
+        }
+        
+    </tbody>
+</table>
