@@ -66,7 +66,7 @@ namespace motorBikeRental.Controllers
         [Route("api/bikeData/UpdateBike/{id}")]
         public IHttpActionResult UpdateBike(int id, bike bike)
         {
-            Debug.WriteLine("I have reached the update bike method!");
+    
             if (!ModelState.IsValid)
             {
                 Debug.WriteLine("Model State is invalid");

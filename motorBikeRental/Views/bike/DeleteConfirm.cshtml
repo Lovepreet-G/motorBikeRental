@@ -1,0 +1,15 @@
+﻿@model motorBikeRental.Models.bikeDto
+
+@{
+    ViewBag.Title = "DeleteConfirm";
+}
+
+<h2>Are you sure you want to delete this animal?</h2>
+<a href="/Bike/ListForAdmin">Cancel</a>
+<h2>@Model.BikeModel</h2>
+<div>Brand: @Model.BikeBrand</div>
+<div>Rent Per Day: @Model.BikeRate</div>
+<form action="/bike/Delete/@Model.BikeId" method="POST">
+    <input type="submit" value="Confirm Delete" />
+
+</form>

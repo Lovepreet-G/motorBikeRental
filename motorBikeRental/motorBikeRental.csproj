@@ -305,6 +305,9 @@
     <Content Include="Views\customer\ListForAdmin.cshtml" />
     <Content Include="Views\rental\GetRentalsByCustomerId.cshtml" />
     <Content Include="Views\bike\New.cshtml" />
+    <Content Include="Views\bike\Edit.cshtml" />
+    <Content Include="Views\customer\Edit.cshtml" />
+    <Content Include="Views\bike\DeleteConfirm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

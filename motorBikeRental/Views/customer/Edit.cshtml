@@ -1,0 +1,27 @@
+﻿@model motorBikeRental.Models.customerDto
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+
+<h2>Edit Customer</h2>
+
+<form method="POST" action="/customer/Update/@Model.customerId">
+    <input type="text" style="display:none;" name="customerId" value="@Model.customerId" />
+    <div>
+        <label>Brand:</label> <input type="text" name="customerName" value="@Model.customerName" />
+    </div>
+    <div>
+        <label>Model Name:</label> <input type="text" name="customerAddress" value="@Model.customerAddress" />
+    </div>
+    <div>
+        <label>Rent Per Day:</label> <input type="number" name="customerPhone" value="@Model.customerPhone" />
+    </div>
+    <div>
+
+        <input type="submit" value="Update" />
+    </div>
+
+</form>
+

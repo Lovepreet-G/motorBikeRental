@@ -24,16 +24,10 @@ namespace motorBikeRental.Controllers
         public ActionResult List()
         {
             string url = "ListRentals";
-            HttpResponseMessage response = client.GetAsync(url).Result;
-
-            //Debug.WriteLine("The response code is ");
-            //Debug.WriteLine(response.StatusCode);
+            HttpResponseMessage response = client.GetAsync(url).Result;            
 
             IEnumerable<rentalHistoryDto> rentals = response.Content.ReadAsAsync<IEnumerable<rentalHistoryDto>>().Result;
-            //Debug.WriteLine("Number of animals received : ");
-            //Debug.WriteLine(animals.Count());
-
-
+            
             return View(rentals);
         }
 
@@ -44,13 +38,7 @@ namespace motorBikeRental.Controllers
             string url = "GetRentalsByBikeId/" + id;
             HttpResponseMessage response = client.GetAsync(url).Result;
 
-            //Debug.WriteLine("The response code is ");
-            //Debug.WriteLine(response.StatusCode);
-
             IEnumerable<rentalHistoryDto> rentals = response.Content.ReadAsAsync<IEnumerable<rentalHistoryDto>>().Result;
-            //Debug.WriteLine("Number of animals received : ");
-            //Debug.WriteLine(animals.Count());
-
 
             return View(rentals);
         }
@@ -62,13 +50,7 @@ namespace motorBikeRental.Controllers
             string url = "GetRentalsByCustomerId/" + id;
             HttpResponseMessage response = client.GetAsync(url).Result;
 
-            //Debug.WriteLine("The response code is ");
-            //Debug.WriteLine(response.StatusCode);
-
             IEnumerable<rentalHistoryDto> rentals = response.Content.ReadAsAsync<IEnumerable<rentalHistoryDto>>().Result;
-            //Debug.WriteLine("Number of animals received : ");
-            //Debug.WriteLine(animals.Count());
-
 
             return View(rentals);
         }

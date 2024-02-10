@@ -4,6 +4,8 @@
 }
 
 <h2>List Of Bikes</h2>
+<a href="/bike/ListForAdmin" class="card-link">Back to List of Bikes</a>
+<br>
 (Click on bike model name to see the list of customer who rented this bike )
 <table class="table">
     <thead>
@@ -15,15 +17,17 @@
         </tr>
     </thead>
     <tbody>
-       @foreach(var bike in Model)
-       {
+        @foreach (var bike in Model)
+        {
             <tr>
                 <th scope="row"><a href="/rental/GetRentalsByBikeId/@bike.BikeId" class="card-link">@bike.BikeModel</a></th>
                 <td>@bike.BikeBrand</td>
                 <td>@bike.BikeRate</td>
-                <td><a href="#" class="card-link">Update</a> <a href="#" class="card-link">Delete</a></td>
+                <td><a href="/bike/Edit/@bike.BikeId" class="card-link">Update</a> <a href="/bike/DeleteConfirm/@bike.BikeId" class="card-link">Delete</a></td>
             </tr>
         }
-        <a href="bike/New" class="card-link">Add New Bike</a>
     </tbody>
+
 </table>
+<a href="/bike/New" class="card-link">Add New Bike</a>
+
