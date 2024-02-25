@@ -21,7 +21,6 @@ namespace motorBikeRental.Controllers
             client.BaseAddress = new Uri("https://localhost:44384/api/bikeData/");
         }
 
-        /// <summary>
         /// Grabs the authentication cookie sent to this controller.
         /// For proper WebAPI authentication, you can send a post request with login credentials to the WebAPI and log the access token from the response. The controller already knows this token, so we're just passing it up the chain.
         /// 
